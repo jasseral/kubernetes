@@ -8,7 +8,7 @@ spec:
   type: NodePort
   ports:
   - name: http
-    nodePort: 30475 # the port exposed 
+    nodePort: 30475 # the Port exposed 
     port: 3000 # Some times your application inside container serves different services on a different port.
     targetPort: 3000 # This is the actual port on which your application is running inside the container.
     protocol: TCP
