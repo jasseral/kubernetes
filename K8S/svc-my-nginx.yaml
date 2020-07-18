@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx
+  labels:
+    run: my-nginx
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 80 # Some times your application inside container serves different services on a different port.
+    protocol: TCP
+    
+  selector:
+    run: my-nginx
